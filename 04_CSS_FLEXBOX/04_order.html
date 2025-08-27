@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display_flex</title>
+    <style>
+      .container {
+        border: 2px dashed gray;
+        margin: 20px;
+        height: 200px;
+        display: flex;
+      }
+
+      .box {
+        margin: 6px;
+        background-color: blueviolet;
+        height: 20px;
+        width: 20px;
+        color: white;
+        text-align: center;
+      }
+
+      .box1 {
+        order: 1;
+        background-color: coral;
+      }
+
+      .box3 {
+        order: 2;
+        background-color: lightseagreen;
+      }
+
+      .box4 {
+        order: 1;
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+    </div>
+  </body>
+</html>

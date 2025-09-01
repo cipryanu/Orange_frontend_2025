@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f8fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .form-container {
+        background: #fff;
+        width: 400px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-top: -80px;
+      }
+
+      .form-header {
+        background: #42a5f5;
+        height: 120px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .form-container h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .form-container p {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .form-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .form-group input,
+      .form-container textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        outline: none;
+      }
+
+      .form-container textarea {
+        resize: none;
+        height: 100px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background: #42a5f5;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background: #1e88e5;
+      }
+
+      .social-icons {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: #42a5f5;
+        font-size: 15px;
+      }
+      .social-icons a:hover {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-header"></div>
+
+    <div class="form-container">
+      <h2>Get in Touch</h2>
+      <p>Nunc erat cursus tellus gravida.</p>
+
+      <div class="form-group">
+        <h5>Fist Name</h5>
+        <input type="text" placeholder="First name" />
+        <h5>Last Name</h5>
+        <input type="text" placeholder="Last name" />
+      </div>
+      <div class="form-group">
+        <h5>E-mail</h5>
+        <input type="email" placeholder="Email" />
+        <h5>Phone</h5>
+        <input type="tel" placeholder="Phone number" />
+      </div>
+      <h5>Your Query</h5>
+      <textarea placeholder="Please enter query"></textarea>
+      <button type="submit">Submit</button>
+    </div>
+
+    <div class="social-icons">
+      <a href="http://www.twitter.com">Twitter</a>
+      <a href="http://wwww.facebook.com">Facebook</a>
+      <a href="http://www.google.com">Google</a>
+      <a href="http://www.instagram.com">Instagram</a>
+    </div>
+  </body>
+</html>

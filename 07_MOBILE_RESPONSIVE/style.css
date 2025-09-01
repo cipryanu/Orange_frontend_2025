@@ -1,0 +1,57 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: antiquewhite;
+}
+
+h1 {
+  display: none;
+  font-size: 100px;
+  color: white;
+}
+
+/*widescreen*/
+
+@media screen {
+  min-width: 1201px;
+}
+body {
+  background-color: lightblue;
+}
+#widescreen > h1 {
+  display: block;
+}
+
+/*laptop*/
+@media screen {
+  min-width: 769px;
+  max-width: 1200px;
+}
+body {
+  background-color: lightgreen;
+}
+#laptop > h1 {
+  display: block;
+}
+
+/*tablet*/
+@media screen {
+  min-width: 481px;
+  max-width: 768px;
+}
+body {
+  background-color: lightyellow;
+}
+#tablet > h1 {
+  display: block;
+}
+
+/*mobile*/
+@media screen {
+  max-width: 480px;
+}
+body {
+  background-color: lightpink;
+}
+#mobile > h1 {
+  display: block;
+}

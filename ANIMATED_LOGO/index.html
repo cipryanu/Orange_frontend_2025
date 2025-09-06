@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Swinging Bulb Logo</title>
+    <style>
+      :root {
+        --bg-dark: #000;
+        --bg-light: #111;
+        --dark: #222;
+        --lit: #ffd84d;
+        --swing-time: 4s;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: system-ui, sans-serif;
+        overflow: hidden;
+        background: var(--bg-dark);
+        animation: bgPulse var(--swing-time) ease-in-out infinite alternate;
+      }
+
+      .stage {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+      }
+
+      /* swinging group */
+      .bulb-swing {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform-origin: top center;
+        animation: swing var(--swing-time) ease-in-out infinite alternate;
+      }
+
+      .cord {
+        width: 3px;
+        height: 240px; /* slightly longer rope */
+        background: #444;
+        margin: 0 auto;
+        transform-origin: top center;
+        animation: cordSway var(--swing-time) ease-in-out infinite alternate;
+      }
+
+      .bulb {
+        width: 45px; /* smaller bulb */
+        height: 45px;
+        border-radius: 50%;
+        background: #fff8e1;
+        margin: 0 auto;
+        box-shadow: 0 0 15px 8px #ffd84d; /* toned-down glow */
+        animation: bulbGlow var(--swing-time) ease-in-out infinite alternate;
+      }
+
+      /* text container */
+      .word {
+        position: absolute;
+        bottom: 100px; /* lifted closer to bulb */
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        line-height: 1.1;
+      }
+
+      .line1 span {
+        font-size: 90px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--dark);
+        animation: glowLetter var(--swing-time) ease-in-out infinite;
+      }
+
+      .line2 {
+        margin-top: 12px; /* closer to first line */
+      }
+
+      .line2 span {
+        display: inline-block;
+        font-size: 36px; /* slightly smaller */
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: var(--dark);
+        animation: glowLetter var(--swing-time) ease-in-out infinite;
+      }
+
+      /* dynamic glow with delays */
+      .word span:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .word span:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .word span:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .word span:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .word span:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .word span:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .word span:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .word span:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .word span:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .word span:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+      .word span:nth-child(11) {
+        animation-delay: 1s;
+      }
+      .word span:nth-child(12) {
+        animation-delay: 1.1s;
+      }
+      .word span:nth-child(13) {
+        animation-delay: 1.2s;
+      }
+      .word span:nth-child(14) {
+        animation-delay: 1.3s;
+      }
+      .word span:nth-child(15) {
+        animation-delay: 1.4s;
+      }
+      .word span:nth-child(16) {
+        animation-delay: 1.5s;
+      }
+      .word span:nth-child(17) {
+        animation-delay: 1.6s;
+      }
+      .word span:nth-child(18) {
+        animation-delay: 1.7s;
+      }
+      .word span:nth-child(19) {
+        animation-delay: 1.8s;
+      }
+      .word span:nth-child(20) {
+        animation-delay: 1.9s;
+      }
+      .word span:nth-child(21) {
+        animation-delay: 2s;
+      }
+      .word span:nth-child(22) {
+        animation-delay: 2.1s;
+      }
+      .word span:nth-child(23) {
+        animation-delay: 2.2s;
+      }
+      .word span:nth-child(24) {
+        animation-delay: 2.3s;
+      }
+      .word span:nth-child(25) {
+        animation-delay: 2.4s;
+      }
+      .word span:nth-child(26) {
+        animation-delay: 2.5s;
+      }
+      .word span:nth-child(27) {
+        animation-delay: 2.6s;
+      }
+
+      /* glow animation */
+      @keyframes glowLetter {
+        0%,
+        20%,
+        100% {
+          color: var(--dark);
+          text-shadow: none;
+        }
+        50% {
+          color: var(--lit);
+          text-shadow: 0 0 15px var(--lit), 0 0 40px var(--lit);
+        }
+      }
+
+      /* pendulum swing */
+      @keyframes swing {
+        0% {
+          transform: rotate(-18deg);
+        }
+        100% {
+          transform: rotate(18deg);
+        }
+      }
+
+      /* cord sway */
+      @keyframes cordSway {
+        0% {
+          transform: skewX(3deg);
+        }
+        50% {
+          transform: skewX(0deg);
+        }
+        100% {
+          transform: skewX(-3deg);
+        }
+      }
+
+      /* bulb dim/brighten */
+      @keyframes bulbGlow {
+        0%,
+        100% {
+          opacity: 0.6;
+          box-shadow: 0 0 10px 4px #ffd84d;
+        }
+        50% {
+          opacity: 1;
+          box-shadow: 0 0 40px 20px #ffd84d;
+        }
+      }
+
+      /* background pulse */
+      @keyframes bgPulse {
+        0%,
+        100% {
+          background: var(--bg-dark);
+        }
+        50% {
+          background: var(--bg-light);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bulb-swing">
+        <div class="cord"></div>
+        <div class="bulb"></div>
+      </div>
+
+      <div class="word">
+        <div class="line1">
+          <span>C</span><span>i</span><span>p</span><span>r</span><span>i</span
+          ><span>a</span><span>n</span>
+          <span>&nbsp;</span>
+          <span>D</span><span>u</span><span>m</span><span>i</span><span>t</span
+          ><span>r</span><span>e</span><span>s</span><span>c</span
+          ><span>u</span>
+        </div>
+
+        <div class="line2">
+          <span>P</span><span>h</span><span>o</span><span>t</span><span>o</span
+          ><span>g</span><span>r</span><span>a</span><span>p</span><span>h</span
+          ><span>y</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

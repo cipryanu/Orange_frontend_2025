@@ -24,3 +24,7 @@ function calculateSum() {
   var sum = a + b;
   document.getElementById("result").innerText = "Suma este: " + sum;
 }
+
+var numbers =[6, 2, 7, 8, 9];
+console.log(numbers[4]);
+console.log(numbers[5]);
